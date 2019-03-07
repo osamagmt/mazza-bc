@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const VIP = ['460976885036220426','532592989789487104'];
+const VIP = ['460976885036220426','532592989789487104',process.env.VIP];
 const prefix = "$";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
