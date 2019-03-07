@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const VIP = ['532592989789487104','532592989789487104'];
-const adminprefix = "G";
+const VIP = ['460976885036220426','532592989789487104'];
+const adminprefix = "$";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
 if (!VIP.includes(message.author.id)) return;
