@@ -21,40 +21,6 @@ if (message.content.startsWith(prefix + 'setavatar')) {
   }
 });
 
-client.on('ready', () => {
-console.log('---------------------------------');
-console.log(`  # Bot Name:  ||   ${client.user.tag}`);
-console.log('---------------------------------');
-console.log(`  # Prefix:    ||   ${prefix}`);
-console.log('---------------------------------');
-console.log(`  # Id:        ||   ${client.user.id}`);
-console.log('--------------------------------');
-console.log(`  # Servers:   ||   ${client.guilds.size}`);
-console.log('--------------------------------');
-console.log(`  # Members:   ||   ${client.users.size}`);
-console.log('---------------------------------');
-console.log(`  # Channels:  ||   ${client.channels.size}`);
-console.log('---------------------------------');
-});
-const VIP = ['460976885036220426','532592989789487104'];
-const prefix = "-";
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-if (!VIP.includes(message.author.id)) return;
-if (message.content.startsWith(prefix + 'setname')) {
-  client.user.setUsername(argresult).then
-	  message.channel.sendMessage(`Username Changed To **${argresult}**`)
-  return message.reply("You Can change the username 2 times per hour");
-} else
-if (message.content.startsWith(prefix + 'setavatar')) {
-  client.user.setAvatar(argresult);
-   message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
-} else
-  if (message.content.startsWith(prefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/osama_gmt");
-      message.channel.send(``)
-  }
-});
 
 client.on('ready', () => {
 console.log('---------------------------------');
