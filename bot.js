@@ -6,7 +6,7 @@ client.on('ready', () => {
 console.log('---------------------------------');
 console.log(`  # Bot Name:  ||   ${client.user.tag}`);
 console.log('---------------------------------');
-console.log(`  # Prefix:    ||   ${prefix}`);
+console.log(`  # Prefix:    ||   ${prefixbc}`);
 console.log('---------------------------------');
 console.log(`  # Id:        ||   ${client.user.id}`);
 console.log('--------------------------------');
