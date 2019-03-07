@@ -1,3 +1,22 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+
+client.on('ready', () => {
+console.log('---------------------------------');
+console.log(`  # Bot Name:  ||   ${client.user.tag}`);
+console.log('---------------------------------');
+console.log(`  # Prefix:    ||   ${prefix}`);
+console.log('---------------------------------');
+console.log(`  # Id:        ||   ${client.user.id}`);
+console.log('--------------------------------');
+console.log(`  # Servers:   ||   ${client.guilds.size}`);
+console.log('--------------------------------');
+console.log(`  # Members:   ||   ${client.users.size}`);
+console.log('---------------------------------');
+console.log(`  # Channels:  ||   ${client.channels.size}`);
+console.log('---------------------------------');
+});
 const prefixbc = "$";
 client.on('message', async message => {  
 if(message.author.bot) return;
