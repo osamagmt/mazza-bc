@@ -64,8 +64,6 @@ client.on("message", message => {
 if(message.content.startsWith(prefix + "help")) {
 const embed = new Discord.RichEmbed() .setColor("RANDOM").setDescription(`**${prefix}obc ⇏ لإرسال رسالة إلى جميع أعضاء السيرفر
 ${prefix}bc ⇏ لإرسال رسالة إلى الأعضاء الأونلاين فقط
-${prefix}bcrole ⇏  لإرسآل رسالة لرتبة محدده 
-ex :   ${prefix}bcrole @admin message
 __تنبية__ : إذا أردت أن تمنشن العضو فقط أكتب بالرسالة
 \`[user]\` وسيقوم بإستبدالها بمنشن العضو**`);
 message.channel.sendEmbed(embed)}
