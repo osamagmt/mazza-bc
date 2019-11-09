@@ -17,7 +17,7 @@ if (message.content.startsWith(prefix + 'setavatar')) {
 } else
   if (message.content.startsWith(prefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/osama_gmt");
-      message.channel.send(``)
+      message.channel.send(`Streming Changed To **${argresult}**`)
   }
 });
 
