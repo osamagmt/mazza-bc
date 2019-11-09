@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const VIP = ['460976885036220426','532592989789487104',process.env.VIP];
-const prefix = "$";
+const VIP = ['',''];
+const prefix = "";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
 if (!VIP.includes(message.author.id)) return;
@@ -23,20 +23,10 @@ if (message.content.startsWith(prefix + 'setavatar')) {
 
 
 client.on('ready', () => {
-console.log('---------------------------------');
 console.log(`  # Bot Name:  ||   ${client.user.tag}`);
-console.log('---------------------------------');
-console.log(`  # Prefix:    ||   ${prefix}`);
-console.log('---------------------------------');
-console.log(`  # Id:        ||   ${client.user.id}`);
-console.log('--------------------------------');
-console.log(`  # Servers:   ||   ${client.guilds.size}`);
-console.log('--------------------------------');
-console.log(`  # Members:   ||   ${client.users.size}`);
-console.log('---------------------------------');
-console.log(`  # Channels:  ||   ${client.channels.size}`);
-console.log('---------------------------------');
 });
+
+
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
@@ -68,4 +58,4 @@ __تنبية__ : إذا أردت أن تمنشن العضو فقط أكتب با
 \`[user]\` وسيقوم بإستبدالها بمنشن العضو**`);
 message.channel.sendEmbed(embed)}
 });
-client.login(process.env.BOT_TOKEN);
+client.login("");
