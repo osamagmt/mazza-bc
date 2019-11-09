@@ -55,7 +55,7 @@ client.on("message", message => {
 if(message.content.startsWith(prefix + 'obc')) {  
       let args = message.content.split(" ").slice(1);
       var argresult = args.join(' '); 
-message.channel.send(`**:loudspeaker:  تم ارسال هذة الرسالة الى __${message.guild.memberCount}__ مشترك**`);
+message.channel.send(`: عدد الاعضاء المستلمين\`${message.guild.memberCount}\``);
 
 message.guild.members.forEach(m => { 
 m.send(argresult.replace('[user]', m));
